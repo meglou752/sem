@@ -2,5 +2,6 @@
 Labwork for Software Engineering Methods.
 
 1/2/24
-Testing build of main.yml.
+Testing build of main.yml
+Adding badge to github
 
