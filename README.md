@@ -1,4 +1,4 @@
-![GitHub Workflow Status (branch)](https://img.shields.io/github/actions/workflow/status/meglou752/sem/main.yml?branch=master)
+![GitHub Workflow Status (branch)](https://img.shields.io/github/actions/workflow/status/meglou782/sem/main.yml?branch=master)
 
 Labwork for Software Engineering Methods.
 
