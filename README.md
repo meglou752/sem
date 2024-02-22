@@ -11,3 +11,6 @@ Labwork for Software Engineering Methods.
 Testing build of main.yml
 Adding badge to github
 Adding branch develop badge to github.
+
+22/2/24
+Checking workflow  
