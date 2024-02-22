@@ -16,7 +16,7 @@ public class App
         // Extract employee salary information
         ArrayList<Employee> employees = a.getAllSalaries();
 
-        // Test the size of the returned data - should be 240124
+        // All salaries in employee (all departments)
         a.printSalaries(employees);
 
         // Disconnect from database
