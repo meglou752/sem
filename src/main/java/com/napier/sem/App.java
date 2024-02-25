@@ -95,7 +95,7 @@ public class App
             Statement stmt = con.createStatement();
             // Create string for SQL statement
             String strSelect =
-                    "SELECT employees.emp_no, employees.first_name, employees.last_name, titles.title, salaries.salary, departments.dept_name, CONCAT(managers.first_name, ' ', managers.last_name) AS manager " +
+                    "SELECT employees.emp_no, employees.first_name, employees.last_name, titles.title, salaries.salary, CONCAT(managers.first_name, ' ', managers.last_name) AS manager " +
                             "FROM employees " +
                             "JOIN titles ON employees.emp_no = titles.emp_no " +
                             "JOIN salaries ON employees.emp_no = salaries.emp_no " +
@@ -119,7 +119,6 @@ public class App
                 emp.first_name = rset.getString("first_name");
                 emp.last_name = rset.getString("last_name");
                 emp.title = rset.getString("titles.title");
-                emp.dept_name = rset.getString("departments.dept_name");
                 return emp;
             }
             else
@@ -143,7 +142,6 @@ public class App
                             + emp.last_name + "\n"
                             + "Title: " + emp.title + "\n"
                             + "Salary:" + emp.salary + "\n"
-                            + "Department name: " + emp.dept_name + "\n"
                             + "Manager: " + emp.manager + "\n"
                             + "");
         }
