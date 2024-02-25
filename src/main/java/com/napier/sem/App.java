@@ -224,7 +224,7 @@ public class App {
             String strSelect =
                     "SELECT employees.emp_no, employees.first_name, employees.last_name, salaries.salary "
                             + "FROM employees, salaries, departments, dept_emp "
-                            + "WHERE employees.emp_no = salaries.emp_no AND employees.emp_no = dept_emp.emp_no AND dept_emp.dept_no = departments.dept_no AND departments.dept_no = " + dept.dept_no + " AND salaries.to_date = '9999-01-01' "
+                            + "WHERE employees.emp_no = salaries.emp_no AND employees.emp_no = dept_emp.emp_no AND dept_emp.dept_no = departments.dept_no AND departments.dept_name = " + dept.dept_name + " AND salaries.to_date = '9999-01-01' "
                             + "ORDER BY employees.emp_no ASC;";
             // Execute SQL statement
             ResultSet rset = stmt.executeQuery(strSelect);
