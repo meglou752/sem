@@ -199,7 +199,7 @@ public class App {
             // Check if a department is returned
             if (rset.next()) {
                 dept = new Departments();
-                dept.dept_no = rset.getInt("dept_no");
+                dept.dept_no = Integer.parseInt(rset.getString("dept_no").substring(1)); // Assuming 'd007' format
                 dept.dept_name = rset.getString("dept_name");
             }
         } catch (Exception e) {
@@ -208,6 +208,7 @@ public class App {
         }
         return dept;
     }
+
 
 
     public ArrayList<Employee> getSalariesByDepartment(Departments dept)
