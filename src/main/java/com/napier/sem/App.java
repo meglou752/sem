@@ -184,30 +184,31 @@ public class App {
     }
 
     public Departments getDepartment(String dept_name) {
-        Departments dept = null;
         try {
             // Create an SQL statement
-            PreparedStatement stmt = con.prepareStatement(
-                    "SELECT departments.dept_no, departments.dept_name " +
-                            "FROM departments " +
-                            "WHERE dept_name = ?"
-            );
-            // Set the department name parameter
-            stmt.setString(1, dept_name);
+            Statement stmt = con.createStatement();
+            // Create string for SQL statement
+            String strSelect =
+                    "SELECT * FROM departments WHERE dept_name = '" + dept_name + "'";
             // Execute SQL statement
-            ResultSet rset = stmt.executeQuery();
-            // Check if a department is returned
+            ResultSet rset = stmt.executeQuery(strSelect);
+            // Check if department exists
             if (rset.next()) {
-                dept = new Departments();
-                dept.dept_no = Integer.parseInt(rset.getString("dept_no").substring(1)); // Assuming 'd007' format
-                dept.dept_name = rset.getString("dept_name");
+                Departments department = new Departments();
+                department.dept_no = Integer.parseInt(rset.getString("dept_no"));
+                department.dept_name = rset.getString("dept_name");
+                return department;
+            } else {
+                System.out.println("Department not found: " + dept_name);
+                return null;
             }
         } catch (Exception e) {
             System.out.println(e.getMessage());
             System.out.println("Failed to get department details");
+            return null;
         }
-        return dept;
     }
+
 
 
 
