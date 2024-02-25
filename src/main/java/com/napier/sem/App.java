@@ -190,6 +190,7 @@ public class App {
             // Create string for SQL statement
             String strSelect =
                     "SELECT * FROM departments WHERE dept_name = '" + dept_name + "'";
+            System.out.println("SQL Query: " + strSelect); // Debug
             // Execute SQL statement
             ResultSet rset = stmt.executeQuery(strSelect);
             // Check if department exists
@@ -197,6 +198,7 @@ public class App {
                 Departments department = new Departments();
                 department.dept_no = Integer.parseInt(rset.getString("dept_no"));
                 department.dept_name = rset.getString("dept_name");
+                System.out.println("Retrieved Department: " + department.dept_name + " - " + department.dept_no); // Debug
                 return department;
             } else {
                 System.out.println("Department not found: " + dept_name);
@@ -208,6 +210,7 @@ public class App {
             return null;
         }
     }
+
 
 
 
