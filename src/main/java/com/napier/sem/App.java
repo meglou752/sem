@@ -209,6 +209,7 @@ public class App {
         return dept;
     }
 
+
     public ArrayList<Employee> getSalariesByDepartment(Departments dept)
     {
         try {
