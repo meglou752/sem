@@ -196,7 +196,7 @@ public class App {
             // Check if department exists
             if (rset.next()) {
                 Departments department = new Departments();
-                department.dept_no = Integer.parseInt(rset.getString("dept_no"));
+                department.dept_no = rset.getString("dept_no");
                 department.dept_name = rset.getString("dept_name");
                 System.out.println("Retrieved Department: " + department.dept_name + " - " + department.dept_no); // Debug
                 return department;
