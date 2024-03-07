@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<testsuite xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="https://maven.apache.org/surefire/maven-surefire-plugin/xsd/surefire-test-report.xsd" name="com.napier.sem.MyTest" time="0.04" tests="8" errors="0" skipped="0" failures="0">
+<testsuite xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="https://maven.apache.org/surefire/maven-surefire-plugin/xsd/surefire-test-report.xsd" name="com.napier.sem.MyTest" time="0.046" tests="8" errors="0" skipped="0" failures="0">
   <properties>
     <property name="idea.version" value="2023.3.4"/>
     <property name="java.runtime.name" value="Java(TM) SE Runtime Environment"/>
@@ -63,7 +63,7 @@
   <testcase name="displayEmpTestContainsNull" classname="com.napier.sem.MyTest" time="0"/>
   <testcase name="displayEmpTestEmpty" classname="com.napier.sem.MyTest" time="0.001"/>
   <testcase name="printSalariesTestContainsNull" classname="com.napier.sem.MyTest" time="0.001"/>
-  <testcase name="displayEmployee" classname="com.napier.sem.MyTest" time="0.022"/>
+  <testcase name="displayEmployee" classname="com.napier.sem.MyTest" time="0.027"/>
   <testcase name="printSalariesTestEmpty" classname="com.napier.sem.MyTest" time="0.001"/>
   <testcase name="printSalariesTestNull" classname="com.napier.sem.MyTest" time="0"/>
   <testcase name="printSalaries" classname="com.napier.sem.MyTest" time="0.001"/>
